@@ -1,0 +1,28 @@
+{
+	"name": "DeSkin",
+	"version": "0.9",
+	"manifest_version" : 2,
+	"description": "Hides Vevo ads from around Youtube videos",
+	"background" : { "page" : "background.html" },
+	"page_action" :
+	{
+		"default_icon": {
+			"19": "icons/19.png",
+			"38": "icons/38.png"
+		},
+		"default_title" : "DeSkin is in effect"
+
+	},
+	"content_scripts": [
+	{
+		"matches": ["http://www.youtube.com/watch?*"],
+		"js": ["scripts/main.js"],
+		"run_at": "document_idle"
+	}
+	],
+	"icons": {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	}
+}

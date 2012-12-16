@@ -1,6 +1,6 @@
 {
 	"name": "DeSkin",
-	"version": "0.9",
+	"version": "1.1.0.0",
 	"manifest_version" : 2,
 	"description": "Hides Vevo ads from around Youtube videos",
 	"background" : { "page" : "background.html" },
@@ -15,7 +15,7 @@
 	},
 	"content_scripts": [
 	{
-		"matches": ["http://www.youtube.com/watch?*"],
+		"matches": ["*://www.youtube.com/watch?*"],
 		"js": ["scripts/main.js"],
 		"run_at": "document_idle"
 	}
